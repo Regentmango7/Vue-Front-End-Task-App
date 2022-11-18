@@ -13,7 +13,6 @@
         @closeDialogue="closeDialogue($event)"
       />
     </transition>
-    </div>
   </div>
 </template>
 
@@ -52,14 +51,14 @@ export default {
         if (this.curData.new == true) {
           this.curData.new = false;
           this.tableData.push(this.curData);
-          toastr.success("You have successfully added an item.");
+          toastr.success('You have successfully added an item.');
         } else {
           this.tableData[
             this.tableData
               .map((object) => object.title)
               .indexOf(this.curData.title)
           ] = this.curData;
-          toastr.success("You have successfully updated an item.");
+          toastr.success('You have successfully updated an item.');
         }
       }
       this.curData = {
@@ -77,7 +76,7 @@ export default {
           this.tableData.map((object) => object.title).indexOf(title),
           1
         );
-        toastr.success("You have successfully removed an item.");
+        toastr.success('You have successfully removed an item.');
       }
     },
   },
