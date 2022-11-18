@@ -8,8 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "moment": "^2.29.4",
-    "vue": "^3.2.26"
+    "moment": "2.29.4",
+    "toastr": "^2.1.4",
+    "vue": "3.2.45"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",

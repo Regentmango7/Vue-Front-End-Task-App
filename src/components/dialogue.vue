@@ -110,7 +110,10 @@
           </div>
         </div>
         <button class="btn btn-primary" style="margin: 5px" @click="submit()">
-          <i class="fa-solid fa-circle-plus"></i> Add
+          <div v-if="currentData.new">
+            <i class="fa-solid fa-circle-plus"></i> Add
+          </div>
+          <div v-else><i class="fa-solid fa-pen-to-square"></i> Edit</div>
         </button>
         <button
           @click="closeDialogue()"

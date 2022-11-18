@@ -20,6 +20,7 @@
 <script>
 import Table from './components/Table.vue';
 import Dialogue from './components/dialogue.vue';
+import toastr from 'toastr';
 
 export default {
   name: 'App',
@@ -51,12 +52,14 @@ export default {
         if (this.curData.new == true) {
           this.curData.new = false;
           this.tableData.push(this.curData);
+          toastr.success("You have successfully added an item.");
         } else {
           this.tableData[
             this.tableData
               .map((object) => object.title)
               .indexOf(this.curData.title)
           ] = this.curData;
+          toastr.success("You have successfully updated an item.");
         }
       }
       this.curData = {
@@ -74,6 +77,7 @@ export default {
           this.tableData.map((object) => object.title).indexOf(title),
           1
         );
+        toastr.success("You have successfully removed an item.");
       }
     },
   },
